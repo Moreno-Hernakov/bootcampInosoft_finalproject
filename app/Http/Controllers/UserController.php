@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\MongoModel;
 use App\Instruction\Services\UserService;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -10,7 +11,11 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-
+    // private MongoModel $tasks;
+	// public function __construct()
+	// {
+	// 	$this->tasks = new MongoModel('users');
+	// }
 
     private UserService $userService;
 	public function __construct() {
@@ -39,8 +44,9 @@ class UserController extends Controller
         $checkEmail = $this->userService->findEmail($credentials['email']);
         if ($checkEmail != null) {
 			return response()->json([
-                'message' => 'User telah didaftarkan',
-            ]);
+                'success' => false,
+                'message' => 'Email telah didaftarkan',
+            ],409);
 		}
 
         $id = $this->userService->addUser($credentials);
@@ -48,7 +54,7 @@ class UserController extends Controller
         return response()->json([
             'id' => $user['name'],
             'email' => $user['email']
-        ]);
+        ],200);
 
     }
 
@@ -86,6 +92,7 @@ class UserController extends Controller
         Auth::logout();
 
         return response()->json([
+            'success' => true,
             'message' => 'Log Out Success',
         ], 200);
     }
@@ -93,9 +100,10 @@ class UserController extends Controller
     public function refresh()
     {
         return response()->json([
+            'success' => true,
             'access_token' => Auth::refresh(),
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60
-        ]);
+        ], 200);
     }
 }

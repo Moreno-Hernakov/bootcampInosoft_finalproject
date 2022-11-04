@@ -7,12 +7,6 @@ use App\Models\User;
 
 class UserRepository
 {
-    // private MongoModel $users;
-	// public function __construct()
-	// {
-	// 	$this->users = new MongoModel('users');
-	// }
-
 	/**
 	 * Untuk mendapatkan data user berdasarkan id
 	 *  */

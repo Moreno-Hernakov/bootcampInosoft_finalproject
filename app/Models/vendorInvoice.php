@@ -8,7 +8,13 @@ use Jenssegers\Mongodb\Eloquent\Model;
 
 class vendorInvoice extends Model
 {
-    protected $collection = 'vendorInvoice_collection';
+    protected $collection = 'vendor_invoices';
     protected $connection = 'mongodb';
-    use HasFactory;
+    // use HasFactory;  
+
+    protected $fillable = [
+        'instruction_id',
+        'invoice_no',
+        'attachment',
+        'document',];
 }

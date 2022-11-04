@@ -15,8 +15,10 @@ class CreateVendorInvoicesTable extends Migration
     {
         Schema::create('vendor_invoices', function (Blueprint $table) {
             $table->id();
-            $table->int('instruction_id');
+            $table->varchar('instruction_id');
+            $table->varchar('invoice_no');
             $table->varchar('attachment');
+            $table->varchar('document');
             $table->timestamps();
         });
     }
