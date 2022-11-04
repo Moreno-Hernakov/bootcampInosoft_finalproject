@@ -49,4 +49,23 @@ class InstructionService
 		$id = $this->instructionRepository->getDetail($id);
 		return $id;
 	}
+
+	// NOTE: untuk mengedit / modify instruction
+	public function editInstruction(array $data,$id){
+
+		$instruction = $this->instructionRepository->find($id);
+
+		if(!$instruction){
+			return ['status' => false, 'message' => 'ID tidak ditemukan'];
+		}
+
+		$status = $this->instructionRepository->updateInstruction($data, $id);
+
+		if($status){
+			return $instruction;
+		} else {
+			return ['status' => false, 'message' => 'gagal update'];
+		}
+
+	}
 }

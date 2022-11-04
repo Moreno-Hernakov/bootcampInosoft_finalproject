@@ -126,4 +126,52 @@ class InstructionRepository
 		];
 		return $instruction;
 	}
+
+	public function updateInstruction(array $data, $id){
+		if ($data['type'] == 'Logistic Instruction') {
+            $instruction_id = 'LI-'.date('Y').'-'.$this->countId($data['type']);
+        } elseif ($data['type'] == 'Service Instruction') {
+			$instruction_id = 'SI-'.date('Y').'-'.$this->countId($data['type']);
+		}
+
+		$quotation = isset($data['quotation']) ? $data['quotation']: '';
+		$customer_po = isset($data['customer_po']) ? $data['customer_po']: '';
+		$desc_notes = isset($data['desc_notes']) ? $data['desc_notes']: '';
+		$linkTo = isset($data['link_to']) ? $data['link_to']: '';
+
+		if (isset($data['attachment'])) {
+				$name = time().'_'.$data['attachment']->getClientOriginalName();
+				$filePath = $data['attachment']->storeAs('uploads/instruction',$name);
+				$path = '/storage/' . $filePath;
+				$attachment[] =[
+					'file_name' => $name,
+					'file_path' => $path
+				];
+		}
+		else {
+			$attachment = [];
+		}
+
+		$dataSaved = [
+			'instruction_id'=>$instruction_id,
+			'type'=>$data['type'],
+			'assigned_vendor'=>$data['assigned_vendor'],
+			'attention_of'=>$data['attention_of'],
+			'quotation'=>$quotation,
+			'vendor_address'=>$data['vendor_address'],
+			'customer_po' => $customer_po,
+			'customer_contract' =>$data['customer_contract'],
+			'status'=>  0,
+			'invoice_to'=>$data['invoice_to'],
+			// 'attachment'=>$attachment,
+			'desc_notes'=>$desc_notes,
+			'link_to'=>$linkTo,
+			'created_at'=>time()
+		];
+		
+		instruction::where('_id', $id)->push('attachment', $attachment);
+		$id = instruction::where('_id', $id)->update($dataSaved);
+
+		return $id;
+	}
 }
