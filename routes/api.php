@@ -18,17 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::prefix('instruction')->group(function() {
-    Route::post('add_instruction','App\Http\Controllers\InstructionController@add');    
-    Route::get('show_instruction','App\Http\Controllers\InstructionController@show');    
-    Route::get('detail_instruction/{id}','App\Http\Controllers\InstructionController@detail');
-    
-    Route::post('add_cost','App\Http\Controllers\CostController@add');  
-    Route::post('add_internal','App\Http\Controllers\InternalController@add');
-    Route::post('add_invoice','App\Http\Controllers\InvoiceController@add');
-    
-});
-
 Route::group([
     'prefix' => 'auth'
 ], function() {
@@ -41,7 +30,14 @@ Route::group([
         Route::post('refresh','App\Http\Controllers\UserController@refresh');
         
         Route::prefix('instruction')->group(function() {
-          
+            Route::post('add_instruction','App\Http\Controllers\InstructionController@add');    
+            Route::get('show_instruction','App\Http\Controllers\InstructionController@show');    
+            Route::get('detail_instruction/{id}','App\Http\Controllers\InstructionController@detail');
+            
+            Route::post('add_cost','App\Http\Controllers\CostController@add');  
+            Route::post('add_internal','App\Http\Controllers\InternalController@add');
+            Route::post('add_invoice','App\Http\Controllers\InvoiceController@add');
+            
         });
     });
 });

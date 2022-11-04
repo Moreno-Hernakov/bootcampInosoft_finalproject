@@ -7,7 +7,7 @@ use App\Models\vendorInvoice;
 class InvoiceRepository
 {
     /**
-	 * Untuk membuat note internal
+	 * Untuk membuat invoice
 	 */
 	public function create(array $data)
 	{
@@ -53,7 +53,7 @@ class InvoiceRepository
 	}
 
 	/**
-	 * Untuk mendapatkan data note internal berdasarkan id
+	 * Untuk mendapatkan data invoice berdasarkan id
 	 *  */
 	public function find(string $id)
 	{

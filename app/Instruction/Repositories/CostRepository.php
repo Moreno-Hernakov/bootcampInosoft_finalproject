@@ -6,6 +6,9 @@ use App\Models\cost;
 
 class CostRepository
 {
+	/**
+	 * Untuk menambahkan cost
+	 *  */
     public function create(array $data)
 	{	
 		$dataSaved = [
@@ -26,8 +29,9 @@ class CostRepository
 		
 		return $id;
 	}
+
     /**
-	 * Untuk mendapatkan data user berdasarkan id
+	 * Untuk mendapatkan data cost berdasarkan id
 	 *  */
 	public function find(string $id)
 	{

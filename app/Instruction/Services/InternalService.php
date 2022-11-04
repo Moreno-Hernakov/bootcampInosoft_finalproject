@@ -12,7 +12,7 @@ class InternalService
 		$this->internalRepository = new InternalRepository();
 	}
     /**
-	 * NOTE: menambahkan instruction
+	 * NOTE: menambahkan internal
 	 */
 	public function add(array $data)
 	{
@@ -21,7 +21,7 @@ class InternalService
 	}
 
     /**
-	 * NOTE: UNTUK mendapatkan data instruction 
+	 * NOTE: UNTUK mendapatkan data internal 
 	 */
 	public function find(string $id)
 	{

@@ -15,7 +15,7 @@ class CostController extends Controller
 	}
     
     /**
-	 * Untuk membuat instruction
+	 * Untuk membuat cost
 	 */
     public function add(Request $request)
     {

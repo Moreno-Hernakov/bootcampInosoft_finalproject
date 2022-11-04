@@ -12,7 +12,7 @@ class CostService
 		$this->costRepository = new CostRepository();
 	}
     /**
-	 * NOTE: menambahkan instruction
+	 * NOTE: menambahkan cost
 	 */
 	public function add(array $data)
 	{
@@ -21,7 +21,7 @@ class CostService
 	}
 
     /**
-	 * NOTE: UNTUK mendapatkan data instruction 
+	 * NOTE: UNTUK mendapatkan data cost 
 	 */
 	public function find(string $user)
 	{

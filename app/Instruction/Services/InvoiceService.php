@@ -12,7 +12,7 @@ class InvoiceService
 		$this->invoiceRepository = new InvoiceRepository();
 	}
     /**
-	 * NOTE: menambahkan instruction
+	 * NOTE: menambahkan invoice
 	 */
 	public function add(array $data)
 	{
@@ -21,7 +21,7 @@ class InvoiceService
 	}
 
     /**
-	 * NOTE: UNTUK mendapatkan data instruction 
+	 * NOTE: UNTUK mendapatkan data invoice 
 	 */
 	public function find(string $id)
 	{

@@ -18,7 +18,7 @@ class InstructionRepository
     }
 
 	/**
-	 * Untuk membuat instruction
+	 * Untuk menambahkan instruction
 	 */
 	public function create(array $data)
 	{
@@ -70,7 +70,7 @@ class InstructionRepository
 	}
 
 	/**
-	 * Untuk mendapatkan data user berdasarkan id
+	 * Untuk mendapatkan data instruction berdasarkan id
 	 *  */
 	public function find(string $id)
 	{
@@ -79,11 +79,18 @@ class InstructionRepository
 		return $instruction;
 	}
 
+	
+	/**
+	 * Untuk mendapatkan semua data instruction
+	 *  */
 	public function getAll()
 	{
 		return instruction::all('_id','link_to','type','assigned_vendor','attention_of','quote','customer_po','status');
 	}
 
+	/**
+	 * Untuk mendapatkan detail instruction 
+	 *  */
 	public function getDetail($id)
 	{
 		$getInstruction = instruction::find($id);

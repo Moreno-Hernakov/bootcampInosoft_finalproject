@@ -15,7 +15,7 @@ class InternalController extends Controller
 	}
     
     /**
-	 * Untuk membuat instruction
+	 * Untuk membuat internal only
 	 */
     public function add(Request $request)
     {

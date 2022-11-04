@@ -11,17 +11,14 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    // private MongoModel $tasks;
-	// public function __construct()
-	// {
-	// 	$this->tasks = new MongoModel('users');
-	// }
-
     private UserService $userService;
 	public function __construct() {
 		$this->userService = new UserService();
 	}
 
+      /**
+	 * Untuk mendaftarkan user baru
+	 */
     public function register(Request $request)
     {
 
@@ -58,6 +55,9 @@ class UserController extends Controller
 
     }
 
+     /**
+	 * Untuk login user
+	 */
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -87,6 +87,9 @@ class UserController extends Controller
         ], 200);
     }
 
+     /**
+	 * Untuk logout user
+	 */
     public function logout()
     {
         Auth::logout();
@@ -97,6 +100,9 @@ class UserController extends Controller
         ], 200);
     }
 
+     /**
+	 * Untuk refresh token
+	 */
     public function refresh()
     {
         return response()->json([

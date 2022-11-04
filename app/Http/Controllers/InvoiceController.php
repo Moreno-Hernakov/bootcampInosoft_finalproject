@@ -15,7 +15,7 @@ class InvoiceController extends Controller
 	}
     
     /**
-	 * Untuk membuat instruction
+	 * Untuk membuat vendor invoice
 	 */
     public function add(Request $request)
     {

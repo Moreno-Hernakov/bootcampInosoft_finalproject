@@ -17,8 +17,8 @@ class UserService
 	 */
 	public function addUser(array $data)
 	{
-		$taskId = $this->userRepository->create($data);
-		return $taskId;
+		$user = $this->userRepository->create($data);
+		return $user;
 	}
 
 	/**
@@ -26,8 +26,8 @@ class UserService
 	 */
 	public function find(string $user)
 	{
-		$task = $this->userRepository->find($user);
-		return $task;
+		$id = $this->userRepository->find($user);
+		return $id;
 	}
 
 	/**

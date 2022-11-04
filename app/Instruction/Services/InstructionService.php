@@ -30,12 +30,20 @@ class InstructionService
 		return $id;
 	}
 
+	
+    /**
+	 * NOTE: UNTUK mendapatkan semua data instruction 
+	 */
 	public function getAll()
 	{
 		$id = $this->instructionRepository->getAll();
 		return $id;
 	}
 
+	
+    /**
+	 * NOTE: UNTUK mendapatkan detail instruction 
+	 */
 	public function getDetail($id)
 	{
 		$id = $this->instructionRepository->getDetail($id);

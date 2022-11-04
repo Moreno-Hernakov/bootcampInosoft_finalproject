@@ -41,12 +41,18 @@ class InstructionController extends Controller
 
     }
 
+     /**
+	 * Untuk menampilkan semua instruction
+	 */
     public function show()
 	{
 		$id = $this->instructionService->getAll();
 		return response()->json($id,200);
 	}
 
+      /**
+	 * Untuk menampilkan detail instruction
+	 */
     public function detail($id)
 	{
 		$instruction = $this->instructionService->getDetail($id);
