@@ -8,5 +8,12 @@ use Jenssegers\Mongodb\Eloquent\Model;
 
 class internalOnly extends Model
 {
-    use HasFactory;
+    protected $collection = 'internal_onlies';
+    protected $connection = 'mongodb';
+    
+    protected $fillable = [
+        'instruction_id',
+        'user_id',
+        'desc',
+        'attachment',];
 }

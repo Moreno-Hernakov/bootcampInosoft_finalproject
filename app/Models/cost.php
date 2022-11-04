@@ -8,7 +8,17 @@ use Jenssegers\Mongodb\Eloquent\Model;
 
 class cost extends Model
 {
-    protected $collection = 'cost_collection';
+    protected $collection = 'costs';
     protected $connection = 'mongodb';
-    use HasFactory;
+    protected $fillable = [
+        'instruction_id',
+        'desc',
+        'qty',
+        'uom',
+        'unit_price',
+        'disc',
+        'gst_vat',
+        'user_id',
+        'total',
+    ];
 }
