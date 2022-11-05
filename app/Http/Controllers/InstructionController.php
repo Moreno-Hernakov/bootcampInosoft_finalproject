@@ -61,7 +61,7 @@ class InstructionController extends Controller
 	}
 
     // untuk modify instruction
-    public function edit(Request $request, $id){
+    public function edit(Request $request){
 
         $validator = Validator::make($request->all(), [
             'type' =>'required',
@@ -71,6 +71,7 @@ class InstructionController extends Controller
             'customer_contract' =>'required',
             'invoice_to' =>'required',
             'attachment'=>'mimes:pdf,doc,docx',
+            'id' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -79,7 +80,7 @@ class InstructionController extends Controller
 
         $credentials = $request->all();
 
-        $instruction = $this->instructionService->editInstruction($credentials, $id);
+        $instruction = $this->instructionService->editInstruction($credentials);
 
         return response()->json($instruction);
 

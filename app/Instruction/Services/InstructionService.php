@@ -51,17 +51,18 @@ class InstructionService
 	}
 
 	// NOTE: untuk mengedit / modify instruction
-	public function editInstruction(array $data,$id){
+	public function editInstruction(array $data){
 
-		$instruction = $this->instructionRepository->find($id);
+		$instruction = $this->instructionRepository->find($data['id']);
 
 		if(!$instruction){
 			return ['status' => false, 'message' => 'ID tidak ditemukan'];
 		}
 
-		$status = $this->instructionRepository->updateInstruction($data, $id);
+		$status = $this->instructionRepository->updateInstruction($data);
 
 		if($status){
+			$instruction = $this->instructionRepository->find($data['id']);
 			return $instruction;
 		} else {
 			return ['status' => false, 'message' => 'gagal update'];

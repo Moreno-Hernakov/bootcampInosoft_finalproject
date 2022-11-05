@@ -127,7 +127,7 @@ class InstructionRepository
 		return $instruction;
 	}
 
-	public function updateInstruction(array $data, $id){
+	public function updateInstruction(array $data){
 		if ($data['type'] == 'Logistic Instruction') {
             $instruction_id = 'LI-'.date('Y').'-'.$this->countId($data['type']);
         } elseif ($data['type'] == 'Service Instruction') {
@@ -147,9 +147,7 @@ class InstructionRepository
 					'file_name' => $name,
 					'file_path' => $path
 				];
-		}
-		else {
-			$attachment = [];
+				instruction::where('_id', $data['id'])->push('attachment', $attachment);
 		}
 
 		$dataSaved = [
@@ -169,9 +167,8 @@ class InstructionRepository
 			'created_at'=>time()
 		];
 		
-		instruction::where('_id', $id)->push('attachment', $attachment);
-		$id = instruction::where('_id', $id)->update($dataSaved);
+		$status = instruction::where('_id', $data['id'])->update($dataSaved);
 
-		return $id;
+		return $status;
 	}
 }
