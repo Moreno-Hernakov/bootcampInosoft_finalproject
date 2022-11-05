@@ -22,7 +22,6 @@ class InternalController extends Controller
         $validator = Validator::make($request->all(), [
             'attachment'=>'mimes:pdf,doc,docx',
             'instruction_id' => 'required',
-            'user_id' => 'required',
             'desc' => 'required',
         ]);
 
