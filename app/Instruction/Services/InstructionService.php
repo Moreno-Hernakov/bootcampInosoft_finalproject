@@ -69,4 +69,21 @@ class InstructionService
 		}
 
 	}
+	public function recieveInvoice(array $data){	
+		$status = $this->instructionRepository->recieve($data);
+		$instruction = $this->instructionRepository->find($data['id']);
+
+		if($status){
+			$instruction = $this->instructionRepository->find($data['id']);
+			return $instruction;
+		} else {
+			return ['status' => false, 'message' => 'Gagal Menerima Invoice'];
+		}
+	}
+
+	public function getAllComplete()
+	{
+		$id = $this->instructionRepository->getAllComplete();
+		return $id;
+	}
 }
