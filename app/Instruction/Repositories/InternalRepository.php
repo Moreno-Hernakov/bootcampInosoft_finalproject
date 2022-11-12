@@ -27,7 +27,10 @@ class InternalRepository
 		
 		$dataSaved = [
             'instruction_id'=>$data['instruction_id'],
+
             'user_id'=>auth()->user()->id,
+
+
             'desc'=>$data['desc'],
             'attachment'=>$attachment,
 			'created_at'=>time()
