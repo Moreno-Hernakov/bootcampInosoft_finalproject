@@ -171,4 +171,17 @@ class InstructionRepository
 
 		return $status;
 	}
+	public function recieve(array $data){
+		$dataSaved = [
+			'status'=>  2
+		];
+		$status = instruction::where('_id', $data['id'])->update($dataSaved);
+		return $status;
+
+	}
+
+	public function getAllComplete()
+	{
+		return instruction::where('status','!=', 0)->get();	
+	}
 }

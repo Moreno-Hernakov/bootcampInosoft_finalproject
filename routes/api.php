@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use App\Http\Controllers\CostController;
 use App\Http\Controllers\InstructionController;
@@ -48,6 +48,13 @@ Route::group([
             Route::put('edit_cost', [CostController::class, 'edit']);
             Route::put('edit_invoice', [InvoiceController::class, 'edit']);
             Route::put('/edit_internal', [InternalController::class, 'edit']);
+
+            // receive invoice
+            Route::put('/recieve_invoice', [InstructionController::class, 'recieveInvoice']);
+            Route::get('/complete_instruction',[InstructionController::class, 'showComplete']);    
+            Route::get('/exportpdf/{id}',[InstructionController::class, 'exportpdf'])->name('exportpdf');    
+          
+            
             
         });
     });
