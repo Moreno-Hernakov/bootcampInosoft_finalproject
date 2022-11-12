@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\CostController;
+use App\Http\Controllers\InstructionController;
+use App\Http\Controllers\InternalController;
+use App\Http\Controllers\InvoiceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use MongoDB\Operation\InsertOne;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +42,12 @@ Route::group([
             Route::post('add_cost','App\Http\Controllers\CostController@add');  
             Route::post('add_internal','App\Http\Controllers\InternalController@add');
             Route::post('add_invoice','App\Http\Controllers\InvoiceController@add');
+
+            // modify
+            Route::put('edit_instruction', [InstructionController::class, 'edit']);
+            Route::put('edit_cost', [CostController::class, 'edit']);
+            Route::put('edit_invoice', [InvoiceController::class, 'edit']);
+            Route::put('/edit_internal', [InternalController::class, 'edit']);
             
         });
     });

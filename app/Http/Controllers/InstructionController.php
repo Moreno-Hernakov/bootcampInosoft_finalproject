@@ -59,4 +59,30 @@ class InstructionController extends Controller
         return response()->json($instruction);
 		
 	}
+
+    // untuk modify instruction
+    public function edit(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'type' =>'required',
+            'assigned_vendor' =>'required',
+            'attention_of' =>'required',
+            'vendor_address' =>'required',
+            'customer_contract' =>'required',
+            'invoice_to' =>'required',
+            'attachment'=>'mimes:pdf,doc,docx',
+            'id' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
+        $credentials = $request->all();
+
+        $instruction = $this->instructionService->editInstruction($credentials);
+
+        return response()->json($instruction);
+
+    }
 }

@@ -42,4 +42,28 @@ class CostController extends Controller
         return response()->json($cost,200);
 
     }
+    
+    // edit cost
+    public function edit(Request $request){
+        $validator = Validator::make($request->all(), [
+			'desc'=>'required',
+			'qty'=>'required',
+			'uom'=>'required',
+			'unit_price'=>'required',
+			'disc'=>'required',
+			'gst_vat'=>'required',
+			'user_id'=>'required',
+			'total'=>'required',
+            'instruction_id' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+        $credentials = $request->all();
+        $cost = $this->costService->editCost($credentials);
+
+        return response()->json($cost);
+    }
+
 }
