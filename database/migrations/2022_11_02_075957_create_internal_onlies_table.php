@@ -15,7 +15,7 @@ class CreateInternalOnliesTable extends Migration
     {
         Schema::create('internal_onlies', function (Blueprint $table) {
             $table->id();
-            $table->int('instruction_id');
+            $table->varchar('instruction_id');
             $table->int('user_id');
             $table->varchar('desc');
             $table->varchar('attachment');
