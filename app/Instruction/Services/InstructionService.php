@@ -7,12 +7,13 @@ use App\Instruction\Repositories\InstructionRepository;
 class InstructionService
 
 {
-    private InstructionRepository $instructionRepository;
+	private InstructionRepository $instructionRepository;
 
-	public function __construct() {
+	public function __construct()
+	{
 		$this->instructionRepository = new InstructionRepository();
 	}
-    /**
+	/**
 	 * NOTE: menambahkan instruction
 	 */
 	public function addInstruction(array $data)
@@ -21,7 +22,7 @@ class InstructionService
 		return $instruction;
 	}
 
-    /**
+	/**
 	 * NOTE: UNTUK mendapatkan data instruction 
 	 */
 	public function find(string $id)
@@ -30,8 +31,8 @@ class InstructionService
 		return $id;
 	}
 
-	
-    /**
+
+	/**
 	 * NOTE: UNTUK mendapatkan semua data instruction 
 	 */
 	public function getAll()
@@ -40,8 +41,8 @@ class InstructionService
 		return $id;
 	}
 
-	
-    /**
+
+	/**
 	 * NOTE: UNTUK mendapatkan detail instruction 
 	 */
 	public function getDetail($id)
@@ -51,29 +52,39 @@ class InstructionService
 	}
 
 	// NOTE: untuk mengedit / modify instruction
-	public function editInstruction(array $data){
+	public function editInstruction(array $data)
+	{
 
 		$instruction = $this->instructionRepository->find($data['id']);
 
-		if(!$instruction){
+		if (!$instruction) {
 			return ['status' => false, 'message' => 'ID tidak ditemukan'];
 		}
 
 		$status = $this->instructionRepository->updateInstruction($data);
 
-		if($status){
+		if ($status) {
 			$instruction = $this->instructionRepository->find($data['id']);
 			return $instruction;
 		} else {
 			return ['status' => false, 'message' => 'gagal update'];
 		}
-
 	}
-	public function recieveInvoice(array $data){	
-		$status = $this->instructionRepository->recieve($data);
+	public function recieveInvoice(array $data)
+	{
 		$instruction = $this->instructionRepository->find($data['id']);
 
-		if($status){
+		if (!$instruction) {
+			return ['status' => false, 'message' => 'ID tidak ditemukan'];
+		}
+
+		if ($instruction->status != 0) {
+			return ['message' => 'Tidak Dapat di Recieive'];
+		}
+
+		$status = $this->instructionRepository->recieve($data);
+
+		if ($status) {
 			$instruction = $this->instructionRepository->find($data['id']);
 			return $instruction;
 		} else {
@@ -85,5 +96,29 @@ class InstructionService
 	{
 		$id = $this->instructionRepository->getAllComplete();
 		return $id;
+	}
+
+	// terminated
+	public function terminated(array $data)
+	{
+		$instruction = $this->instructionRepository->find($data['id']);
+
+		if (!$instruction) {
+			return ['status' => false, 'message' => 'ID tidak ditemukan'];
+		}
+
+		if ($instruction->status != 0) {
+
+			return ['message' => 'Tidak Dapat Terminate'];
+		}
+
+		$status = $this->instructionRepository->terminated($data);
+
+		if ($status) {
+			$instruction = $this->instructionRepository->find($data['id']);
+			return $instruction;
+		} else {
+			return ['status' => false, 'message' => 'Gagal Terminate'];
+		}
 	}
 }
