@@ -1,8 +1,9 @@
 <template>
   <div>
-
+    <!-- title -->
     <div class="text-3xl font-semibold text-gray-500 px-10 py-7 text-start">Dashboard Sidebar</div>
 
+    <!-- Breadcrumb -->
     <div class="pl-10">
       <nav class="flex" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-3">
@@ -35,15 +36,26 @@
 
     </div>
 
+    <div class="flex justify-end pr-10 gap-3">
+      <div
+              class="group border-2 border-gray-400 bg-whit px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1">
+              <i class='bx bx-mail-send text-teal-400 text-2xl group-hover:text-white' ></i>
+              <h1 class="text-sm">Send Email</h1>
+            </div>
+            <div
+              class="group border-2 border-gray-400 bg-whit px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1">
+              <i class='bx bxs-file-export text-teal-400 text-2xl group-hover:text-white '></i>
+              <h1 class="text-sm">Export</h1>
+            </div>
+    </div>
+    <!-- content -->
     <div class="px-10 w-full mt-5">
       <div class="p-5 bg-white dark:text-white">
 
         <div class="w-full flex justify-between border-b">
-          <div>
-            <ul class="flex gap-10 text-gray-400 text-xl font-semibold cursor-pointer h-full">
-              <li class="border-b-4 border-teal-300 pb-3 text-gray-700">Open</li>
-              <li class="hover:border-b-4 hover:border-teal-300 hover:pb-3 hover:text-gray-700">Completed</li>
-            </ul>
+          <div class="flex items-center gap-3">
+            <i class='bx bx-chevron-left text-2xl text-teal-500 font-bold' ></i>
+            <h1 class="font-semibold">Back</h1>
           </div>
 
           <div class="flex gap-3 mb-3">
@@ -134,14 +146,14 @@
                     <th
                       class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
                       Created at
-                    </th>
+                    </th> 
                     <th
                       class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      QRT
-                    </th>
+                      Created at
+                    </th> 
                     <th
                       class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                      Status
+                      Created at
                     </th>
                   </tr>
                 </thead>
@@ -293,7 +305,7 @@
 
 <script>
 export default {
-  name: 'HomeView',
+  name: 'DetailInstruction',
   data() {
     return {
       show: false,
