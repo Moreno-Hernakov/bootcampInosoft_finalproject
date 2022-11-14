@@ -1,6 +1,6 @@
 <template>
   <div>
-    
+
     <div class="text-3xl font-semibold text-gray-500 px-10 py-7 text-start">Dashboard Sidebar</div>
 
     <div class="pl-10">
@@ -26,7 +26,7 @@
                   clip-rule="evenodd"></path>
               </svg>
               <a href="#"
-                class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white">3rd
+                class="ml-1 text-sm font-medium text-teal-500 hover:text-teal-700 md:ml-2 dark:text-gray-400 dark:hover:text-white">3rd
                 Party Instruction</a>
             </div>
           </li>
@@ -40,7 +40,7 @@
 
         <div class="w-full flex justify-between border-b">
           <div>
-            <ul class="flex gap-3 text-gray-400 text-xl font-semibold cursor-pointer h-full">
+            <ul class="flex gap-10 text-gray-400 text-xl font-semibold cursor-pointer h-full">
               <li class="border-b-4 border-teal-300 pb-3 text-gray-700">Open</li>
               <li class="hover:border-b-4 hover:border-teal-300 hover:pb-3 hover:text-gray-700">Completed</li>
             </ul>
@@ -67,192 +67,227 @@
 
         <div class="flex justify-end">
           <div class="my-5">
-            <label for="create-modal"
+            <label @click="show = !show"
               class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
               <span class="relative text-base text-white">
                 <i class='bx bx-plus text-xl'></i>Create 3rd Party Instruction</span>
 
-            </label>
-          </div>
-        </div>
-
-
-        <div class="bg-white p-8 rounded-md w-full">
-          <div>
-            <div class="-mx-4 sm:-mx-8 px-4 sm:px-4 py- overflow-x-auto">
-              <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
-                <table class="min-w-full leading-normal">
-                  <thead>
-                    <tr>
-                      <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        Name
-                      </th>
-                      <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        products
-                      </th>
-                      <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        Created at
-                      </th>
-                      <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        QRT
-                      </th>
-                      <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        Status
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <div class="flex items-center">
-                          <div class="flex-shrink-0 w-10 h-10">
-                            <img class="w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                              alt="" />
-                          </div>
-                          <div class="ml-3">
-                            <p class="text-gray-900 whitespace-no-wrap">
-                              Vera Carpenter
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">Admin</p>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
-                          Jan 21, 2020
-                        </p>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
-                          43
-                        </p>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                          <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                          <span class="relative">Activo</span>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <div class="flex items-center">
-                          <div class="flex-shrink-0 w-10 h-10">
-                            <img class="w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                              alt="" />
-                          </div>
-                          <div class="ml-3">
-                            <p class="text-gray-900 whitespace-no-wrap">
-                              Blake Bowman
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">Editor</p>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
-                          Jan 01, 2020
-                        </p>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
-                          77
-                        </p>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                          <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                          <span class="relative">Activo</span>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <div class="flex items-center">
-                          <div class="flex-shrink-0 w-10 h-10">
-                            <img class="w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1540845511934-7721dd7adec3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                              alt="" />
-                          </div>
-                          <div class="ml-3">
-                            <p class="text-gray-900 whitespace-no-wrap">
-                              Dana Moore
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">Editor</p>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
-                          Jan 10, 2020
-                        </p>
-                        </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
-                          64
-                        </p>
-                      </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <span class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight">
-                          <span aria-hidden class="absolute inset-0 bg-orange-200 opacity-50 rounded-full"></span>
-                          <span class="relative">Suspended</span>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <div class="flex items-center">
-                          <div class="flex-shrink-0 w-10 h-10">
-                            <img class="w-full h-full rounded-full"
-                              src="https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&h=160&w=160&q=80"
-                              alt="" />
-                          </div>
-                          <div class="ml-3">
-                            <p class="text-gray-900 whitespace-no-wrap">
-                              Alonzo Cox
-                            </p>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">Admin</p>
-                      </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">Jan 18, 2020</p>
-                      </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">70</p>
-                      </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <span class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
-                          <span aria-hidden class="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
-                          <span class="relative">Inactive</span>
-                        </span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div v-show="show" class="
+          absolute
+          mt-2
+          bg-white
+          rounded-md
+          shadow-xl
+          w-full
+          text-start
+        ">
+                <router-link to="/createLogistic" class="
+            block
+            px-4
+            py-3
+            text-sm 
+            hover:bg-gray-200 flex
+            flex items-center
+          ">
+                  <i class='bx bxs-truck text-2xl mr-5 text-teal-500'></i>
+                  <p>
+                    Logistic Instruction
+                  </p>
+                </router-link>
+                <router-link to="/createService" class="
+            block
+            px-4
+            py-3
+            text-sm 
+            hover:bg-gray-200
+            flex items-center
+          ">
+                  <i class='bx bx-cog text-2xl text-teal-500 mr-5'></i>
+                  <p>
+                    Service Instruction
+                  </p>
+                </router-link>
               </div>
-            </div>
+
+            </label>
           </div>
         </div>
       </div>
 
+
+      <div class="bg-white p-8 rounded-md w-full">
+        <div>
+          <div class="-mx-4 sm:-mx-8 px-4 sm:px-4 py- overflow-x-auto">
+            <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+              <table class="min-w-full leading-normal">
+                <thead>
+                  <tr>
+                    <th
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      Name
+                    </th>
+                    <th
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      products
+                    </th>
+                    <th
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      Created at
+                    </th>
+                    <th
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      QRT
+                    </th>
+                    <th
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10">
+                          <img class="w-full h-full rounded-full"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                            alt="" />
+                        </div>
+                        <div class="ml-3">
+                          <p class="text-gray-900 whitespace-no-wrap">
+                            Vera Carpenter
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">Admin</p>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        Jan 21, 2020
+                      </p>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        43
+                      </p>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                        <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                        <span class="relative">Activo</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10">
+                          <img class="w-full h-full rounded-full"
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                            alt="" />
+                        </div>
+                        <div class="ml-3">
+                          <p class="text-gray-900 whitespace-no-wrap">
+                            Blake Bowman
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">Editor</p>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        Jan 01, 2020
+                      </p>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        77
+                      </p>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                        <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                        <span class="relative">Activo</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10">
+                          <img class="w-full h-full rounded-full"
+                            src="https://images.unsplash.com/photo-1540845511934-7721dd7adec3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                            alt="" />
+                        </div>
+                        <div class="ml-3">
+                          <p class="text-gray-900 whitespace-no-wrap">
+                            Dana Moore
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">Editor</p>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        Jan 10, 2020
+                      </p>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        64
+                      </p>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <span class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight">
+                        <span aria-hidden class="absolute inset-0 bg-orange-200 opacity-50 rounded-full"></span>
+                        <span class="relative">Suspended</span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-5 bg-white text-sm">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10">
+                          <img class="w-full h-full rounded-full"
+                            src="https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&h=160&w=160&q=80"
+                            alt="" />
+                        </div>
+                        <div class="ml-3">
+                          <p class="text-gray-900 whitespace-no-wrap">Alonzo Cox</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-5 py-5 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">Admin</p>
+                    </td>
+                    <td class="px-5 py-5 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">Jan 18, 2020</p>
+                    </td>
+                    <td class="px-5 py-5 bg-white text-sm">
+                      <p class="text-gray-900 whitespace-no-wrap">70</p>
+                    </td>
+                    <td class="px-5 py-5 bg-white text-sm">
+                      <span class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
+                        <span aria-hidden class="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
+                        <span class="relative">Inactive</span>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </template>
 
@@ -264,6 +299,11 @@ export default {
   name: 'HomeView',
   components: {
     HelloWorld
-  }
+  },
+  data() {
+    return {
+      show: false,
+    };
+  },
 }
 </script>
