@@ -72,7 +72,6 @@
 
               <span class="relative text-base text-white">
                 <i class='bx bx-plus text-xl'></i>Create 3rd Party Instruction</span>
-
               <div v-show="show" class="
           absolute
           mt-2
