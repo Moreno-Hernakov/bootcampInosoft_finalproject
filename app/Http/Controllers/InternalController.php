@@ -36,4 +36,24 @@ class InternalController extends Controller
         return response()->json($data,200);
 
     }
+    
+    // untuk edit internal
+    public function edit(Request $request){
+        // return $request;
+        $validator = Validator::make($request->all(), [
+            'attachment'=>'mimes:pdf,doc,docx',
+            'id' => 'required',
+            'desc' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
+        $credentials = $request->all();
+        $internal = $this->internalService->editInternal($credentials);
+
+        return response()->json($internal);
+
+    }
 }

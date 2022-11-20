@@ -28,4 +28,19 @@ class InternalService
 		$id = $this->internalRepository->find($id);
 		return $id;
 	}
+
+	// untuk edit internal
+	public function editInternal(array $data){
+		if(!$this->find($data['id'])){
+			return 'ID Internal tidak ditemukan';
+		}
+
+		$status = $this->internalRepository->updateInternal($data);
+
+		if($status){
+			return $this->find($data['id']);
+		} else {
+			return 'Data Internal gagal diupdate';
+		}
+	}
 }
