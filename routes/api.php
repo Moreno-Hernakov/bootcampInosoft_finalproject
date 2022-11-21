@@ -43,6 +43,10 @@
                 Route::post('add_internal', 'App\Http\Controllers\InternalController@add');
                 Route::post('add_invoice', 'App\Http\Controllers\InvoiceController@add');
 
+                Route::post('add_vendor', 'App\Http\Controllers\VendorController@add');
+                Route::get('get_assigned_vendor', 'App\Http\Controllers\VendorController@getAssignedVendor');
+                Route::get('get_vendor_address/{id}', 'App\Http\Controllers\VendorController@getVendorAddress');
+
                 // modify
                 Route::put('edit_instruction', [InstructionController::class, 'edit']);
                 Route::put('edit_cost', [CostController::class, 'edit']);
