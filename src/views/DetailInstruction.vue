@@ -170,7 +170,7 @@
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+        focus:text-gray-700 focus:bg-white focus:border-teal-300 focus:outline-none
       " id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
                     </div>
 
@@ -578,7 +578,7 @@
                       <p class="text-end w-64">Click the button if all vendor invoices have been received</p>
                     </div>
                     <label
-                      class="my-1 relative group h-14 bg-teal-500 px-10 py-4 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                      class="my-2 relative group h-14 bg-teal-500 px-10 py-4 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                       <span class="relative text-base text-white flex items-center">All Received</span>
                     </label>
@@ -634,7 +634,7 @@
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+        focus:text-gray-700 focus:bg-white focus:border-teal-300 focus:outline-none
       " id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
                     </div>
 
