@@ -65,7 +65,7 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="#">
+                    <a href="#" @click.prevent="logout">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>
@@ -113,6 +113,12 @@ modeSwitch.addEventListener("click" , () =>{
     }
     
 });
+    },
+    methods: {
+        async logout() {
+            await this.$store.dispatch('logout')
+            this.$router.push({ name: 'login' })
+        }
     }
 }
 </script>

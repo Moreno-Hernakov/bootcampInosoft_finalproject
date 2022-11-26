@@ -1,26 +1,53 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueRouteMiddleware from 'vue-route-middleware'
+
 import HomeView from '../views/HomeView.vue'
 import DetailInstruction from '../views/DetailInstruction.vue' 
+import Login from '../views/auth/Login.vue'
+
+import guest from '../middleware/guest'
+import auth from '../middleware/auth'
 
 Vue.use(VueRouter)
 
 const routes = [{
     path: '/',
     name: 'home',
-    meta: { title: 'Tube Steam | Home' },
+    meta: {
+      title: 'Home',
+      middleware: [auth]
+    },
     component: HomeView
   },
   {
     path: '/about',
     name: 'about',
-    component: () => import( /* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }, {
+    component: () => import( /* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    meta: {
+      title: 'About',
+      middleware: [auth]
+    }
+  },
+  {
     path: '/detailInstruction',
     name: 'detailInstruction',
-    meta: { title: 'Tube Steam | Create' },
+    meta: {
+      title: 'Create',
+      middleware: [auth]
+    },
     component: DetailInstruction
   },
+  {
+    path: '/login',
+    name: 'login',
+    meta: {
+      title: 'Login',
+      type: 'auth',
+      middleware: [guest]
+    },
+    component: Login
+  }
 ]
 
 const router = new VueRouter({
@@ -29,11 +56,9 @@ const router = new VueRouter({
   routes
 })
 
-
-router.beforeEach((to, from, next) => {
-  console.log(to);
-  document.title = to.meta.title;
-  next();
+router.beforeEach(VueRouteMiddleware({ guest, auth }));
+router.afterEach((to, from) => {
+  document.title = `Tubestream | ${to.meta.title}`;
 });
 
 export default router

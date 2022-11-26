@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" v-if="this.$route.meta.type != 'auth'">
+    
     <Sidebar />
 
     <section class="home">
@@ -9,6 +10,9 @@
     </section>
       
   
+  </div>
+  <div v-else>
+    <router-view/>
   </div>
 </template>
 
@@ -21,6 +25,16 @@ export default {
   components: {
     Sidebar,
     Navbar
+  },
+  computed: {
+    isLoggedIn: function () {
+      return this.$store.getters.isLoggedIn
+    }
+  },
+  created() {
+    if (this.isLoggedIn) {
+      this.$store.dispatch('getUser');
+    }
   }
 }
 </script>
