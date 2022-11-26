@@ -112,4 +112,13 @@ class UserController extends Controller
             'expires_in' => auth()->factory()->getTTL() * 60
         ], 200);
     }
+
+    public function auth()
+    {
+        return response()->json([
+            'success' => true,
+            'user' => auth()->guard('api')->user()
+        ], 200);
+    }
+
 }
