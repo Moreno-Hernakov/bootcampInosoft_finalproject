@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DetailInstruction from '../views/DetailInstruction.vue' 
+import CreateInstruction from '../views/CreateInstruction.vue'
 
 Vue.use(VueRouter)
 
@@ -12,14 +13,15 @@ const routes = [{
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import( /* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }, {
     path: '/detailInstruction',
     name: 'detailInstruction',
-    meta: { title: 'Tube Steam | Create' },
+    meta: { title: 'Tube Steam | Detail' },
     component: DetailInstruction
+  }, {
+    path: '/createInstruction',
+    name: 'detailInstruction',
+    meta: { title: 'Tube Steam | Create' },
+    component: CreateInstruction
   },
 ]
 
