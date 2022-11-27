@@ -23,15 +23,6 @@ const routes = [
     }
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import( /* webpackChunkName: "about" */ '../views/AboutView.vue'),
-    meta: {
-      title: 'About',
-      middleware: [auth]
-    }
-  },
-  {
     path: '/detailInstruction',
     name: 'detailInstruction',
     component: DetailInstruction,
