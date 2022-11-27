@@ -4,6 +4,7 @@ import VueRouteMiddleware from 'vue-route-middleware'
 
 import HomeView from '../views/HomeView.vue'
 import DetailInstruction from '../views/DetailInstruction.vue' 
+import CreateInstruction from '../views/CreateInstruction.vue'
 import Login from '../views/auth/Login.vue'
 
 import guest from '../middleware/guest'
@@ -11,14 +12,15 @@ import auth from '../middleware/auth'
 
 Vue.use(VueRouter)
 
-const routes = [{
+const routes = [
+  {
     path: '/',
     name: 'home',
+    component: HomeView,
     meta: {
       title: 'Home',
       middleware: [auth]
-    },
-    component: HomeView
+    }
   },
   {
     path: '/about',
@@ -32,21 +34,30 @@ const routes = [{
   {
     path: '/detailInstruction',
     name: 'detailInstruction',
+    component: DetailInstruction,
     meta: {
-      title: 'Create',
+      title: 'Detail Instruction',
       middleware: [auth]
-    },
-    component: DetailInstruction
+    }
+  }, 
+  {
+    path: '/createInstruction',
+    name: 'createInstruction',
+    component: CreateInstruction,
+    meta: { 
+       title: 'Create Instruction',
+       middleware: [auth]
+    }
   },
   {
     path: '/login',
     name: 'login',
+    component: Login,
     meta: {
       title: 'Login',
       type: 'auth',
       middleware: [guest]
     },
-    component: Login
   }
 ]
 
