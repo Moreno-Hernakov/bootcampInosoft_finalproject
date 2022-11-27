@@ -1,28 +1,64 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueRouteMiddleware from 'vue-route-middleware'
+
 import HomeView from '../views/HomeView.vue'
 import DetailInstruction from '../views/DetailInstruction.vue' 
 import CreateInstruction from '../views/CreateInstruction.vue'
+import Login from '../views/auth/Login.vue'
+
+import guest from '../middleware/guest'
+import auth from '../middleware/auth'
 
 Vue.use(VueRouter)
 
-const routes = [{
+const routes = [
+  {
     path: '/',
     name: 'home',
-    meta: { title: 'Tube Steam | Home' },
-    component: HomeView
+    component: HomeView,
+    meta: {
+      title: 'Home',
+      middleware: [auth]
+    }
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import( /* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    meta: {
+      title: 'About',
+      middleware: [auth]
+    }
   },
   {
     path: '/detailInstruction',
     name: 'detailInstruction',
-    meta: { title: 'Tube Steam | Detail' },
-    component: DetailInstruction
-  }, {
+    component: DetailInstruction,
+    meta: {
+      title: 'Detail Instruction',
+      middleware: [auth]
+    }
+  }, 
+  {
     path: '/createInstruction',
-    name: 'detailInstruction',
-    meta: { title: 'Tube Steam | Create' },
-    component: CreateInstruction
+    name: 'createInstruction',
+    component: CreateInstruction,
+    meta: { 
+       title: 'Create Instruction',
+       middleware: [auth]
+    }
   },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+    meta: {
+      title: 'Login',
+      type: 'auth',
+      middleware: [guest]
+    },
+  }
 ]
 
 const router = new VueRouter({
@@ -31,11 +67,9 @@ const router = new VueRouter({
   routes
 })
 
-
-router.beforeEach((to, from, next) => {
-  console.log(to);
-  document.title = to.meta.title;
-  next();
+router.beforeEach(VueRouteMiddleware({ guest, auth }));
+router.afterEach((to, from) => {
+  document.title = `Tubestream | ${to.meta.title}`;
 });
 
 export default router

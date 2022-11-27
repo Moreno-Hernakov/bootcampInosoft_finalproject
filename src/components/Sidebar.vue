@@ -65,7 +65,7 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="#">
+                    <a href="#" @click.prevent="logout">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>
@@ -92,27 +92,33 @@
 <script>
 export default {
     mounted() {
-        const body = document.querySelector('body'),
-            sidebar = body.querySelector('nav'),
-            toggle = body.querySelector(".toggle"),
-            modeSwitch = body.querySelector(".toggle-switch"),
-            modeText = body.querySelector(".mode-text");
+      const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
 
 
-        toggle.addEventListener("click", () => {
-            sidebar.classList.toggle("close");
-        })
+      toggle.addEventListener("click" , () =>{
+          sidebar.classList.toggle("close");
+      })
 
-        modeSwitch.addEventListener("click", () => {
-            body.classList.toggle("dark");
+      modeSwitch.addEventListener("click" , () =>{
+          body.classList.toggle("dark");
 
-            if (body.classList.contains("dark")) {
-                modeText.innerText = "Light mode";
-            } else {
-                modeText.innerText = "Dark mode";
-            }
+          if(body.classList.contains("dark")){
+              modeText.innerText = "Light mode";
+          }else{
+              modeText.innerText = "Dark mode";
+          }
 
-        });
+      });
+  },
+  methods: {
+    async logout() {
+        await this.$store.dispatch('logout')
+        this.$router.push({ name: 'login' })
     }
+  }
 }
 </script>
