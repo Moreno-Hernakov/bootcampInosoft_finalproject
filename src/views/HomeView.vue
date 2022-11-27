@@ -84,7 +84,7 @@
           text-start
         ">
                 <router-link to="/createLogistic" class="
-            block
+            flex
             px-4
             py-3
             text-sm 
@@ -92,9 +92,7 @@
             items-center
           ">
                   <i class='bx bxs-truck text-2xl mr-5 text-teal-500'></i>
-                  <p>
-                    Logistic Instruction
-                  </p>
+                  <p>Logistic Instruction</p>
                 </router-link>
                 <router-link to="/createService" class="
             px-4
@@ -124,23 +122,23 @@
                 <thead>
                   <tr>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-zinc-700 dark:text-white dark:border-gray-700">
                       Name
                     </th>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-zinc-700 dark:text-white dark:border-gray-700">
                       products
                     </th>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-zinc-700 dark:text-white dark:border-gray-700">
                       Created at
                     </th>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-zinc-700 dark:text-white dark:border-gray-700">
                       QRT
                     </th>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-zinc-700 dark:text-white dark:border-gray-700">
                       Status
                     </th>
                   </tr>
@@ -275,7 +273,6 @@
     </div>
 
   </div>
-</template>
 </template>
 
 <script>
