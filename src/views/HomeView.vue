@@ -36,20 +36,22 @@
     </div>
 
     <div class="px-10 w-full mt-5">
-      <div class="p-5 bg-white dark:text-white">
+      <div class="p-5 bg-white dark:text-white dark:bg-zinc-800">
 
         <div class="w-full flex justify-between border-b">
           <div>
             <ul class="flex gap-10 text-gray-400 text-xl font-semibold cursor-pointer h-full">
-              <li class="border-b-4 border-teal-300 pb-3 text-gray-700">Open</li>
-              <li class="hover:border-b-4 hover:border-teal-300 hover:pb-3 hover:text-gray-700">Completed</li>
+              <li class="border-b-4 border-teal-300 pb-3 text-gray-700 dark:text-white">Open</li>
+              <li class="hover:border-b-4 hover:border-teal-300 hover:pb-3 hover:text-gray-700 dark:hover:text-white">
+                Completed</li>
             </ul>
           </div>
 
           <div class="flex gap-3 mb-3">
             <form action="" class="relative mx-auto w-max">
               <input type="search"
-                class="peer cursor-pointer relative z-10 h-12 w-12 rounded-xl border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-teal-300 focus:pl-16 focus:pr-4" />
+                class="peer cursor-pointer relative z-10 h-12 w-12 rounded-xl border bg-transparent outline-none focus:w-full focus:cursor-text focus:border-teal-300 focus:pl-16 focus:pr-4" />
+
               <svg xmlns="http://www.w3.org/2000/svg"
                 class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-teal-400 px-3.5 peer-focus:border-teal-300 peer-focus:stroke-teal-300"
                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -58,7 +60,7 @@
             </form>
 
             <div
-              class="group border-2 border-gray-200 px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1">
+              class="group border-2 border-gray-200 px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1 dark:border-gray-500 dark:hover:border-teal-500">
               <i class='bx bxs-file-export text-teal-400 text-2xl group-hover:text-white '></i>
               <h1 class="text-sm">Export</h1>
             </div>
@@ -86,8 +88,8 @@
             px-4
             py-3
             text-sm 
-            hover:bg-gray-200 flex
-            flex items-center
+            hover:bg-gray-200 
+            items-center
           ">
                   <i class='bx bxs-truck text-2xl mr-5 text-teal-500'></i>
                   <p>
@@ -95,7 +97,6 @@
                   </p>
                 </router-link>
                 <router-link to="/createService" class="
-            block
             px-4
             py-3
             text-sm 
@@ -115,7 +116,7 @@
       </div>
 
 
-      <div class="bg-white p-8 rounded-md w-full">
+      <div class="bg-white dark:bg p-8 rounded-md w-full dark:bg-zinc-800">
         <div>
           <div class="-mx-4 sm:-mx-8 px-4 sm:px-4 py- overflow-x-auto">
             <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
@@ -123,30 +124,31 @@
                 <thead>
                   <tr>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
                       Name
                     </th>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
                       products
                     </th>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
                       Created at
                     </th>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
                       QRT
                     </th>
                     <th
-                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                      class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-600 uppercase tracking-wider dark:bg-gray-900 dark:text-white dark:border-gray-700">
                       Status
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:text-white  dark:border-gray-600">
                       <div class="flex items-center">
                         <div class="flex-shrink-0 w-10 h-10">
                           <img class="w-full h-full rounded-full"
@@ -154,128 +156,113 @@
                             alt="" />
                         </div>
                         <div class="ml-3">
-                          <p class="text-gray-900 whitespace-no-wrap">
+                          <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                             Vera Carpenter
                           </p>
                         </div>
                       </div>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">Admin</p>
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <p class="text-gray-900 whitespace-no-wrap dark:text-white">Admin</p>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                         Jan 21, 2020
                       </p>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                         43
                       </p>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
                       <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                         <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                        <span class="relative">Activo</span>
+                        <span class="relative text-white">Activo</span>
                       </span>
                     </td>
                   </tr>
                   <tr>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:text-white  dark:border-gray-600">
                       <div class="flex items-center">
                         <div class="flex-shrink-0 w-10 h-10">
                           <img class="w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
                             alt="" />
                         </div>
                         <div class="ml-3">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            Blake Bowman
+                          <p class="text-gray-900 whitespace-no-wrap dark:text-white">
+                            Vera Carpenter
                           </p>
                         </div>
                       </div>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">Editor</p>
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <p class="text-gray-900 whitespace-no-wrap dark:text-white">Admin</p>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
-                        Jan 01, 2020
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <p class="text-gray-900 whitespace-no-wrap dark:text-white">
+                        Jan 21, 2020
                       </p>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
-                        77
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <p class="text-gray-900 whitespace-no-wrap dark:text-white">
+                        43
                       </p>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
                       <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                         <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                        <span class="relative">Activo</span>
+                        <span class="relative text-white">Activo</span>
                       </span>
                     </td>
                   </tr>
                   <tr>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:text-white  dark:border-gray-600">
                       <div class="flex items-center">
                         <div class="flex-shrink-0 w-10 h-10">
                           <img class="w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1540845511934-7721dd7adec3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
                             alt="" />
                         </div>
                         <div class="ml-3">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            Dana Moore
+                          <p class="text-gray-900 whitespace-no-wrap dark:text-white">
+                            Vera Carpenter
                           </p>
                         </div>
                       </div>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">Editor</p>
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <p class="text-gray-900 whitespace-no-wrap dark:text-white">Admin</p>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
-                        Jan 10, 2020
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <p class="text-gray-900 whitespace-no-wrap dark:text-white">
+                        Jan 21, 2020
                       </p>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">
-                        64
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <p class="text-gray-900 whitespace-no-wrap dark:text-white">
+                        43
                       </p>
                     </td>
-                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                      <span class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight">
-                        <span aria-hidden class="absolute inset-0 bg-orange-200 opacity-50 rounded-full"></span>
-                        <span class="relative">Suspended</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="px-5 py-5 bg-white text-sm">
-                      <div class="flex items-center">
-                        <div class="flex-shrink-0 w-10 h-10">
-                          <img class="w-full h-full rounded-full"
-                            src="https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&h=160&w=160&q=80"
-                            alt="" />
-                        </div>
-                        <div class="ml-3">
-                          <p class="text-gray-900 whitespace-no-wrap">Alonzo Cox</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-5 py-5 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">Admin</p>
-                    </td>
-                    <td class="px-5 py-5 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">Jan 18, 2020</p>
-                    </td>
-                    <td class="px-5 py-5 bg-white text-sm">
-                      <p class="text-gray-900 whitespace-no-wrap">70</p>
-                    </td>
-                    <td class="px-5 py-5 bg-white text-sm">
-                      <span class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
-                        <span aria-hidden class="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
-                        <span class="relative">Inactive</span>
+                    <td
+                      class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                      <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                        <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                        <span class="relative text-white">Activo</span>
                       </span>
                     </td>
                   </tr>
@@ -288,6 +275,7 @@
     </div>
 
   </div>
+</template>
 </template>
 
 <script>

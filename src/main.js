@@ -5,7 +5,7 @@ import './assets/css/sidebar.css';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import store from './store'
-
+import './assets/css/tailwind.css'
 
 axios.defaults.withCredentials = true
 axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";

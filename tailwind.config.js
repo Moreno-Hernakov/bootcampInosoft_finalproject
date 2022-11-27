@@ -1,4 +1,6 @@
 module.exports = {
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   variants: {
     extend: {
       opacity: ['disabled'],
@@ -7,5 +9,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 };

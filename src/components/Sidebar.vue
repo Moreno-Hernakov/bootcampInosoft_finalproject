@@ -3,7 +3,7 @@
         <header>
             <div class="image-text">
                 <span class="image">
-                    <h1 class="px-3.5 py-1 bg-teal-300 text-2xl font-bold rounded-full text-white">S</h1>
+                    <h1 class="px-3.5 py-1 bg-teal-300 text-2xl font-bold rounded-full text-white dark:text-gray-400">S</h1>
                 </span>
 
                 <div class="text logo-text">
@@ -82,7 +82,6 @@
                         <span class="switch"></span>
                     </div>
                 </li>
-
             </div>
         </div>
 
@@ -92,33 +91,34 @@
 <script>
 export default {
     mounted() {
-      const body = document.querySelector('body'),
-      sidebar = body.querySelector('nav'),
-      toggle = body.querySelector(".toggle"),
-      modeSwitch = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle"),
+            modeSwitch = body.querySelector(".toggle-switch"),
+            modeText = body.querySelector(".mode-text");
 
 
-      toggle.addEventListener("click" , () =>{
-          sidebar.classList.toggle("close");
-      })
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
 
-      modeSwitch.addEventListener("click" , () =>{
-          body.classList.toggle("dark");
+        modeSwitch.addEventListener("click", () => {
 
-          if(body.classList.contains("dark")){
-              modeText.innerText = "Light mode";
-          }else{
-              modeText.innerText = "Dark mode";
-          }
+            body.classList.toggle("dark");
 
-      });
-  },
-  methods: {
-    async logout() {
-        await this.$store.dispatch('logout')
-        this.$router.push({ name: 'login' })
+            if (body.classList.contains("dark")) {
+                modeText.innerText = "Light mode";
+            } else {
+                modeText.innerText = "Dark mode";
+            }
+
+        });
+    },
+    methods: {
+        async logout() {
+            await this.$store.dispatch('logout')
+            this.$router.push({ name: 'login' })
+        }
     }
-  }
 }
 </script>
