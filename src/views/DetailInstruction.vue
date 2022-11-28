@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#E4E9F7]">
+  <div class="bg-[#E4E9F7] dark:bg-zinc-900">
     <!-- title -->
     <div class="text-3xl font-semibold text-gray-500 px-10 py-7 text-start">Dashboard Sidebar</div>
 
@@ -40,7 +40,7 @@
       <div data-bs-toggle="modal" data-bs-target="#sendEmail"
         class="group border-2 border-gray-400 bg-whit px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1 cursor-pointer">
         <i class='bx bx-mail-send text-teal-400 text-2xl group-hover:text-white'></i>
-        <h1 class="text-sm">Send Email</h1>
+        <h1 class="text-sm dark:text-white">Send Email</h1>
       </div>
 
       <!-- modal -->
@@ -111,14 +111,13 @@
       <div
         class="group border-2 border-gray-400 bg-whit px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1">
         <i class='bx bxs-file-export text-teal-400 text-2xl group-hover:text-white '></i>
-        <h1 class="text-sm">Export</h1>
+        <h1 class="text-sm dark:text-white">Export</h1>
       </div>
     </div>
 
-
     <!-- content -->
     <div class="px-10 w-full mt-5">
-      <div class="bg-white dark:text-white">
+      <div class="bg-white dark:text-white dark:bg-zinc-800">
 
         <div class="px-5 pt-5 w-full flex justify-between border-b">
           <div class="flex items-center gap-3">
@@ -266,166 +265,166 @@
                   <thead>
                     <tr>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         Description
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         QTY
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         UGM
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         Unit Price
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         Discount (%)
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         GSE/GKT(%)
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         Currency
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         Vst Account
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         Sub Total
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         Total
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider dark:bg-gray-700 dark:text-white dark:border-gray-600">
                         Change To
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">Transporttationi from Ringsite</p>
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900 ">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">Transporttationi from Ringsite</p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">1</p>
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">1</p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           Trip
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           1,400.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           0
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           5
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           AED
                         </p>
                       </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           70.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           1,400.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           1,470.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm dark:bg-zinc-900 dark:border-gray-600">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           MITME
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="6">
-                        <p class="text-gray-900 whitespace-no-wrap">Exchange Rate <span class="font-bold">1 USD = 3.6725
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900" colspan="6">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">Exchange Rate <span class="font-bold">1 USD = 3.6725
                             AED</span></p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap"><span class="font-bold">AED </span>(total)</p>
+                      <td class="px-5 py-5 bg-gray-100 text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white"><span class="font-bold">AED </span>(total)</p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-gray-100 text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           70,00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-gray-100 text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           1,400.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-gray-100 text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           1,470.00
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="6">
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900" colspan="6">
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap"><span class="font-bold">AED </span>(total)</p>
+                      <td class="px-5 py-5 bg-gray-100 text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white"><span class="font-bold">AED </span>(total)</p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-gray-100 text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           70,00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-gray-100 text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           1,400.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-gray-100 text-sm dark:bg-zinc-900">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           1,470.00
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="5">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900" colspan="5">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           Attachment
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="6">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900" colspan="6">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           Notes
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="5" rowspan="3">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-white text-sm dark:bg-zinc-900" colspan="5" rowspan="3">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                         </p>
                         <div class="flex gap-3 mb-4">
                           <i class='bx bx-paperclip -rotate-45 text-2xl text-teal-500'></i>
@@ -441,8 +440,8 @@
                             <i class='bx bx-plus text-xl'></i>Add Attachments</span>
                         </label>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm" colspan="6">
-                        <p class="text-gray-900 whitespace-no-wrap">
+                      <td class="px-5 py-5 bg-gray-100 text-sm dark:bg-zinc-900" colspan="6">
+                        <p class="text-gray-900 whitespace-no-wrap dark:text-white">
                           1 x Desert Truck from Rig-Site (1/2)
                         </p>
                       </td>
@@ -463,8 +462,6 @@
                 <span class="relative text-base text-white">
                   <i class='bx bx-plus text-xl mb-5'></i> Add Attachments</span>
               </label>
-
-
 
               <!-- modal vendor invoice -->
               <div
@@ -527,14 +524,14 @@
           <table class="w-full ">
             <thead class="bg-gray-300 text-start">
               <tr>
-                <th class="text-start text-white px-3 py-1 border border-gray-300 ">Invoice No.</th>
-                <th class="text-start text-white py-1 border border-gray-300">Invoice Attachment</th>
-                <th class="text-start text-white py-1 border border-gray-300">Support Document</th>
-                <th></th>
+                <th class="text-start text-white px-3 py-1 border border-gray-300 dark:bg-zinc-700 dark:border-0 rounded-tl-lg">Invoice No.</th>
+                <th class="text-start text-white py-1 border border-gray-300 dark:bg-zinc-700 dark:border-0">Invoice Attachment</th>
+                <th class="text-start text-white py-1 border border-gray-300 dark:bg-zinc-700 dark:border-0">Support Document</th>
+                <th class="dark:bg-zinc-700 dark:border-0 rounded-tr-lg"></th>
               </tr>
             </thead>
             <tbody>
-              <tr class="border">
+              <tr class="border dark:border-gray-500">
                 <td class="px-3 py-1">AAL-008</td>
                 <td>
                   <div class="py-1 flex items-center text-teal-500">
@@ -545,7 +542,7 @@
                 <td>
                   <div class="py-1 flex items-center gap-2">
                     <p class="text-white bg-teal-500 rounded-full px-1.5">0</p>
-                    <i class='bx bx-chevron-down text-2xl bg-gray-100 rounded-full px-1 hover:bg-gray-300'></i>
+                    <i class='bx bx-chevron-down text-2xl bg-gray-100 rounded-full px-1 hover:bg-gray-300 dark:bg-slate-600'></i>
                   </div>
                 </td>
                 <td>
@@ -555,7 +552,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="border">
+              <tr class="border dark:border-gray-500">
                 <td colspan="5">
                   <div class="flex w-full gap-2">
                     <div class="w-1/2 flex justify-end items-center">
@@ -576,7 +573,7 @@
 
 
         <div>
-          <h1 class="font-bold text-xl bg-gray-300 text-gray-600 px-5 py-3">For Internal Only</h1>
+          <h1 class="font-bold text-xl bg-gray-300 text-gray-600 px-5 py-3 dark:bg-gray-700 dark:text-white">For Internal Only</h1>
           <div class="flex px-5">
             <div class="w-1/2">
               <p class="text-sm mt-5 mb-7">Attachment </p>
