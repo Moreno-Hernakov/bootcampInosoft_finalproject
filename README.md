@@ -7,15 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-<h1>TubeStream</h1>
-<h4>backEnd</h4>
-    - clone branch backEnd <br>
-    - jalankan perintah composer install
-    - copy .env dan lakukan perintah php artisan key:generate <br>
-    - setup configurasi database dan jalankan perintah php artisan migrate --seed <br>
+# TubeStream
+#### backEnd
+    - clone branch backEnd 
+    - jalankan perintah ```composer install```
+    - copy .env dan lakukan perintah php artisan key:generate 
+    - setup configurasi database dan jalankan perintah php artisan migrate --seed 
     - jalankan php artisan serve dan buka relative link untuk project TubeStream
-    
-<h4>frontEnd</h4>
+  
+  
+#### frontEnd
     - clone branch frontEnd <br>
     - lakukan perintah npm install<br>
     - jalankan npm run serve dan buka relative link untuk project TubeStream
+    
+
+this project was made with [Laravel](https://laravel.com/) and [vueJs](https://vuejs.org/) 
