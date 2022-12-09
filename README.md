@@ -10,7 +10,7 @@
 # TubeStream
 #### backEnd
     - clone branch backEnd 
-    - jalankan perintah ```composer install```
+    - jalankan perintah composer install
     - copy .env dan lakukan perintah php artisan key:generate 
     - setup configurasi database dan jalankan perintah php artisan migrate --seed 
     - jalankan php artisan serve dan buka relative link untuk project TubeStream
