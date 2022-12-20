@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 
-use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
+use App\Exports\InstructionExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Validator;
 use App\Instruction\Services\InstructionService;
+use App\Models\instruction;
 
 class InstructionController extends Controller
 {
@@ -106,13 +109,17 @@ class InstructionController extends Controller
         $id = $this->instructionService->getAllComplete();
         return response()->json($id, 200);
     }
-
+    //  Export PDF : yang di export adalah detail instruction
     public function exportpdf($id)
     {
         $instruction = $this->instructionService->getDetail($id);
-
-        $pdf = Pdf::loadview('pdf', compact('instruction'));
+        
+        $pdf = PDF::loadview('exports.pdf', compact('instruction'));
         return $pdf->stream('instruktsi.pdf');
+    }
+    // Export Excel
+    public function exportexcel(){
+        return Excel::download(new InstructionExport, 'Data Instruction.xlsx');
     }
 
     // terminated
