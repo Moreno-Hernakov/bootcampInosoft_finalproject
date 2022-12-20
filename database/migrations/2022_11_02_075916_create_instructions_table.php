@@ -15,13 +15,13 @@ class CreateInstructionsTable extends Migration
     {
         Schema::create('instructions', function (Blueprint $table) {
             $table->id();
+            $table->varchar('instruction_id');
             $table->varchar('link_to');
             $table->varchar('type');
             $table->varchar('assigned_vendor');
             $table->varchar('vendor_address');
             $table->varchar('attention_of');
             $table->varchar('quotation');
-            $table->varchar('vendor_address');
             $table->varchar('customer_contract');
             $table->varchar('customer_po');
             $table->tinyInteger('status')->comment('0=progres, 1=terminated, 2=completed');
