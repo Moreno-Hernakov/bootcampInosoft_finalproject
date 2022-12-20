@@ -111,7 +111,7 @@ class InstructionController extends Controller
     {
         $instruction = $this->instructionService->getDetail($id);
 
-        $pdf = PDF::loadview('pdf', compact('instruction'));
+        $pdf = Pdf::loadview('pdf', compact('instruction'));
         return $pdf->stream('instruktsi.pdf');
     }
 
