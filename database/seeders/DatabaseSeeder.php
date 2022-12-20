@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Vendor;
 use App\Models\instruction;
+use App\Models\customer;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +17,12 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@example.com',
             'password' => bcrypt('rahasia123')
         ]);
+
+        for ($i=0; $i <= 20; $i++) { 
+            customer::create([
+                "name" => "user" . $i
+            ]);
+        }
 
         for ($i=0; $i <= 20; $i++) { 
             vendor::create([
