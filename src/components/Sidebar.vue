@@ -7,7 +7,7 @@
                 </span>
 
                 <div class="text logo-text">
-                    <span class="name">Tube Steam</span>
+                    <span class="name">Tube Stream</span>
                     <span class="profession">Tabung Uap</span>
                 </div>
             </div>
@@ -19,10 +19,10 @@
             <div class="menu">
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <router-link to="/">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">Dashboard</span>
-                        </a>
+                        </router-link>
                     </li>
 
                     <li class="nav-link">

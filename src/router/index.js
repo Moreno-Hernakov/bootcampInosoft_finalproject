@@ -23,7 +23,7 @@ const routes = [
     }
   },
   {
-    path: '/detailInstruction',
+    path: '/detailInstruction/:id',
     name: 'detailInstruction',
     component: DetailInstruction,
     meta: {
@@ -32,7 +32,7 @@ const routes = [
     }
   }, 
   {
-    path: '/createInstruction',
+    path: '/createInstruction/:instruction',
     name: 'createInstruction',
     component: CreateInstruction,
     meta: { 

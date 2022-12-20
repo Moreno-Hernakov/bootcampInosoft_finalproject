@@ -16,7 +16,7 @@ axios.defaults.baseURL = 'http://localhost:8000/api/'
 
 const token = localStorage.getItem('token')
 if(token){
-  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+  axios.defaults.headers.common['Authorization'] = token
 }
 
 // manage error and expire token
@@ -24,15 +24,16 @@ axios.interceptors.response.use(undefined, function (error) {
   if (error) {
     const originalRequest = error.config;
     if (error.response.status === 401 && !originalRequest._retry && !error.response.data.message) {
-        originalRequest._retry = true;
-        store.dispatch('logout')
-        return router.push({name: 'login'})
+      originalRequest._retry = true;
+      store.dispatch('logout')
+      return router.push({name: 'login'})
     }
     else{
       store.commit('handle_error',error.response.data.message);
     }
   }
 })
+window.axios = axios
 
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false

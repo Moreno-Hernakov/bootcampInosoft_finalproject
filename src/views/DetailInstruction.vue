@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#E4E9F7]">
     <!-- title -->
-    <div class="text-3xl font-semibold text-gray-500 px-10 py-7 text-start">Dashboard Sidebar</div>
+    <div class="px-10 text-3xl font-semibold text-gray-500 py-7 text-start">Dashboard Sidebar</div>
 
     <!-- Breadcrumb -->
     <div class="pl-10">
@@ -36,22 +36,22 @@
 
     </div>
 
-    <div class="flex justify-end pr-10 gap-3">
+    <div class="flex justify-end gap-3 pr-10">
       <div data-bs-toggle="modal" data-bs-target="#sendEmail"
         class="group border-2 border-gray-400 bg-whit px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1 cursor-pointer">
-        <i class='bx bx-mail-send text-teal-400 text-2xl group-hover:text-white'></i>
+        <i class='text-2xl text-teal-400 bx bx-mail-send group-hover:text-white'></i>
         <h1 class="text-sm">Send Email</h1>
       </div>
 
       <!-- modal -->
-      <div class="modal fade fixed hidden top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+      <div class="fixed top-0 left-0 hidden w-full h-full overflow-x-hidden overflow-y-auto outline-none modal fade"
         id="sendEmail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered relative w-auto pointer-events-none">
+        <div class="relative w-auto pointer-events-none modal-dialog modal-lg modal-dialog-centered">
           <div
-            class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+            class="relative flex flex-col w-full text-current bg-white border-none rounded-md shadow-lg outline-none pointer-events-auto modal-content bg-clip-padding">
 
             <div class="text-center">
-              <p class="text-md font-semibold py-7">Send Mail</p>
+              <p class="font-semibold text-md py-7">Send Mail</p>
             </div>
 
             <div class="px-10">
@@ -65,15 +65,15 @@
 
               <div class="my-5">
                 <label>Recipients</label>
-                <div class="inline-block relative w-full">
+                <div class="relative inline-block w-full">
                   <select
-                    class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                    class="block w-full px-4 py-2 pr-8 leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline">
                     <option></option>
                     <option>Option 2</option>
                     <option>Option 3</option>
                   </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <div class="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
+                    <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </div>
@@ -83,22 +83,22 @@
               <div class="mb-10">
                 <h1>Attatchment</h1>
                 <div class="flex gap-3">
-                  <i class='bx bx-paperclip -rotate-45 text-2xl text-teal-500'></i>
+                  <i class='text-2xl text-teal-500 -rotate-45 bx bx-paperclip'></i>
                   <h1 class="text-teal-500 text-md">RRIN-2021-0054 DN.pdf</h1>
                 </div>
               </div>
             </div>
 
-            <div class="flex gap-5 my-5 justify-end mx-5">
+            <div class="flex justify-end gap-5 mx-5 my-5">
               <div>
                 <label data-bs-dismiss="modal"
-                  class="relative group h-14 border-2 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-500 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white">
+                  class="relative px-6 py-2 font-semibold border-2 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-500 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white">
                   <span class="relative text-base">Cancel</span>
                 </label>
               </div>
               <div>
                 <label
-                  class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                  class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                   <span class="relative text-base text-white">Submit</span>
                 </label>
@@ -110,39 +110,39 @@
 
       <div
         class="group border-2 border-gray-400 bg-whit px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1">
-        <i class='bx bxs-file-export text-teal-400 text-2xl group-hover:text-white '></i>
+        <i class='text-2xl text-teal-400 bx bxs-file-export group-hover:text-white '></i>
         <h1 class="text-sm">Export</h1>
       </div>
     </div>
 
 
     <!-- content -->
-    <div class="px-10 w-full mt-5">
+    <div class="w-full px-10 mt-5">
       <div class="bg-white dark:text-white">
 
-        <div class="px-5 pt-5 w-full flex justify-between border-b">
-          <div class="flex items-center gap-3">
-            <i class='bx bx-chevron-left text-2xl text-teal-500 font-bold'></i>
+        <div class="flex justify-between w-full px-5 pt-5 border-b">
+          <router-link to="/" class="flex items-center gap-3">
+            <i class='text-2xl font-bold text-teal-500 bx bx-chevron-left'></i>
             <h1 class="font-semibold">Back</h1>
-          </div>
+          </router-link>
 
           <div class="flex gap-3 mb-3">
             <div data-bs-toggle="modal" data-bs-target="#terminate"
               class="group border-2 border-gray-200 px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1">
-              <i class='bx bx-block text-red-400 text-2xl group-hover:text-white group-hover:text-red-400'></i>
+              <i class='text-2xl text-red-400 bx bx-block group-hover:text-white group-hover:text-red-400'></i>
               <h1 class="text-sm">Terminate</h1>
             </div>
 
             <!-- terminate modal -->
             <div
-              class="modal fade fixed hidden top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+              class="fixed top-0 left-0 hidden w-full h-full overflow-x-hidden overflow-y-auto outline-none modal fade"
               id="terminate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered relative w-auto pointer-events-none">
+              <div class="relative w-auto pointer-events-none modal-dialog modal-lg modal-dialog-centered">
                 <div
-                  class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                  class="relative flex flex-col w-full text-current bg-white border-none rounded-md shadow-lg outline-none pointer-events-auto modal-content bg-clip-padding">
 
                   <div class="text-center">
-                    <p class="text-md font-semibold py-7">Reason of Cancellation</p>
+                    <p class="font-semibold text-md py-7">Reason of Cancellation</p>
                   </div>
 
                   <div class="px-10">
@@ -161,24 +161,24 @@
                     <div class="mb-10">
                       <h1 class="mb-3">Attatchment</h1>
                       <label
-                        class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                        class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                         <span class="relative text-base text-white">
-                          <i class='bx bx-plus text-xl'></i>Add Attachments</span>
+                          <i class='text-xl bx bx-plus'></i>Add Attachments</span>
                       </label>
                     </div>
                   </div>
 
-                  <div class="flex gap-5 my-5 justify-end mx-5">
+                  <div class="flex justify-end gap-5 mx-5 my-5">
                     <div>
                       <label data-bs-dismiss="modal"
-                        class="relative group h-14 border-2 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-500 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white">
+                        class="relative px-6 py-2 font-semibold border-2 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-500 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white">
                         <span class="relative text-base">Cancel</span>
                       </label>
                     </div>
                     <div>
                       <label
-                        class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                        class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                         <span class="relative text-base text-white">Submit</span>
                       </label>
@@ -190,14 +190,14 @@
 
             <div
               class="group border-2 border-gray-200 px-2.5 py-1.5 rounded-md cursor-pointer hover:bg-teal-500 hover:text-white hover:border-teal-500 transition duration-300 flex items-center gap-1">
-              <i class='bx bxs-edit text-teal-400 text-2xl group-hover:text-white '></i>
+              <i class='text-2xl text-teal-400 bx bxs-edit group-hover:text-white '></i>
               <h1 class="text-sm">Modify</h1>
             </div>
           </div>
         </div>
 
-        <div class="mx-10 my-10  border-b-2 pb-5">
-          <table class="text-start w-full">
+        <div class="pb-5 mx-10 my-10 border-b-2">
+          <table class="w-full text-start">
             <tr>
               <td>Tipe</td>
               <td>Li No</td>
@@ -209,12 +209,13 @@
             <tr>
               <td>
                 <div class="flex items-center gap-3 font-bold">
-                  <i class='bx bxs-truck text-2xl text-teal-600'></i>
-                  <h1>Logistic Instruction</h1>
+                  <i class='text-2xl text-teal-600 bx bxs-truck'></i>
+                  <h1 v-if="result.type == 'LI'">Logistic Instruction</h1>
+                  <h1 v-if="result.type == 'SI'">Service Instruction</h1>
                 </div>
               </td>
               <td>
-                <h1 class="font-bold text-lg">Li-2973-2344</h1>
+                <h1 class="text-lg font-bold">{{ result.instruction_id }}</h1>
               </td>
               <td>
                 <div class="flex gap-3">
@@ -223,225 +224,227 @@
                 </div>
               </td>
               <td>
-                <h1 class="font-bold text-lg">ANDIN - 09832312</h1>
+                <h1 class="text-lg font-bold">{{ result.customer_po }}</h1>
               </td>
               <td></td>
               <td>
-                <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                  <span aria-hidden class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                  <span class="relative">Activo</span>
+                <span class="relative inline-block px-3 py-1 font-semibold leading-tight text-green-900">
+                  <span aria-hidden class="absolute inset-0 bg-[#E2EBF9] rounded-full"></span>
+                  <span class="relative text-[#637ca0]" v-if="result.status == 0">
+                    In Progress
+                  </span>
                 </span>
               </td>
             </tr>
             <tr>
               <td>
-                <h1 class="mt-8"> Attention Or </h1>
+                <h1 class="mt-8"> Attention Of </h1>
               </td>
               <td>
-                <h1 class="mt-8"> Argument Vendor </h1>
+                <h1 class="mt-8"> Assigned Vendor </h1>
               </td>
               <td>
-                <h1 class="mt-8"> Vendor no </h1>
+                <h1 class="mt-8"> Vendor Quotation no </h1>
               </td>
               <td>
                 <h1 class="mt-8"> Vendor Add </h1>
               </td>
             </tr>
-            <tr class="font-bold text-lg">
-              <td>Priyesh Tralkj</td>
-              <td>AQILTY(ABU DHABI)</td>
-              <td>MITME-SQL-01(Appendix 1)</td>
-              <td colspan="3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, temporibus?</td>
+            <tr class="text-lg font-bold">
+              <td>{{ result.attention_of }}</td>
+              <td>{{ result.assigned_vendor }}</td>
+              <td>{{ result.quotation }}</td>
+              <td colspan="3">{{ result.vendor_address }}</td>
             </tr>
           </table>
         </div>
 
 
-        <div class="mx-5 px-8 rounded-md">
-          <h1 class="font-bold text-2xl  text-start my-4">Cost Detail</h1>
+        <div class="px-8 mx-5 rounded-md">
+          <h1 class="my-4 text-2xl font-bold text-start">Cost Detail</h1>
           <div>
-            <div class="mx-4 sm:-mx-8 px-4 sm:px-4 py-overflow-x-auto">
-              <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+            <div class="px-4 mx-4 sm:-mx-8 sm:px-4 py-overflow-x-auto">
+              <div class="inline-block min-w-full overflow-hidden rounded-lg shadow">
                 <table class="min-w-full leading-normal">
                   <thead>
                     <tr>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         Description
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         QTY
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         UGM
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         Unit Price
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         Discount (%)
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         GSE/GKT(%)
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         Currency
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         Vst Account
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         Sub Total
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         Total
                       </th>
                       <th
-                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-xs font-semibold text-gray-600 text-start tracking-wider">
+                        class="px-5 py-3 text-xs font-semibold tracking-wider text-gray-600 bg-gray-100 border-b-2 border-gray-200 text-start">
                         Change To
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white">
                         <p class="text-gray-900 whitespace-no-wrap">Transporttationi from Ringsite</p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white">
                         <p class="text-gray-900 whitespace-no-wrap">1</p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white">
                         <p class="text-gray-900 whitespace-no-wrap">
                           Trip
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white">
                         <p class="text-gray-900 whitespace-no-wrap">
                           1,400.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white">
                         <p class="text-gray-900 whitespace-no-wrap">
                           0
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white">
                         <p class="text-gray-900 whitespace-no-wrap">
                           5
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white">
                         <p class="text-gray-900 whitespace-no-wrap">
                           AED
                         </p>
                       </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
                         <p class="text-gray-900 whitespace-no-wrap">
                           70.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
                         <p class="text-gray-900 whitespace-no-wrap">
                           1,400.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
                         <p class="text-gray-900 whitespace-no-wrap">
                           1,470.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
                         <p class="text-gray-900 whitespace-no-wrap">
                           MITME
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="6">
+                      <td class="px-5 py-5 text-sm bg-white" colspan="6">
                         <p class="text-gray-900 whitespace-no-wrap">Exchange Rate <span class="font-bold">1 USD = 3.6725
                             AED</span></p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
+                      <td class="px-5 py-5 text-sm bg-gray-100">
                         <p class="text-gray-900 whitespace-no-wrap"><span class="font-bold">AED </span>(total)</p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
+                      <td class="px-5 py-5 text-sm bg-gray-100">
                         <p class="text-gray-900 whitespace-no-wrap">
                           70,00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
+                      <td class="px-5 py-5 text-sm bg-gray-100">
                         <p class="text-gray-900 whitespace-no-wrap">
                           1,400.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
+                      <td class="px-5 py-5 text-sm bg-gray-100">
                         <p class="text-gray-900 whitespace-no-wrap">
                           1,470.00
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="6">
+                      <td class="px-5 py-5 text-sm bg-white" colspan="6">
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
+                      <td class="px-5 py-5 text-sm bg-gray-100">
                         <p class="text-gray-900 whitespace-no-wrap"><span class="font-bold">AED </span>(total)</p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
+                      <td class="px-5 py-5 text-sm bg-gray-100">
                         <p class="text-gray-900 whitespace-no-wrap">
                           70,00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
+                      <td class="px-5 py-5 text-sm bg-gray-100">
                         <p class="text-gray-900 whitespace-no-wrap">
                           1,400.00
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm">
+                      <td class="px-5 py-5 text-sm bg-gray-100">
                         <p class="text-gray-900 whitespace-no-wrap">
                           1,470.00
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="5">
+                      <td class="px-5 py-5 text-sm bg-white" colspan="5">
                         <p class="text-gray-900 whitespace-no-wrap">
                           Attachment
                         </p>
                       </td>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="6">
+                      <td class="px-5 py-5 text-sm bg-white" colspan="6">
                         <p class="text-gray-900 whitespace-no-wrap">
                           Notes
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td class="px-5 py-5 bg-white text-sm" colspan="5" rowspan="3">
+                      <td class="px-5 py-5 text-sm bg-white" colspan="5" rowspan="3">
                         <p class="text-gray-900 whitespace-no-wrap">
                         </p>
                         <div class="flex gap-3 mb-4">
-                          <i class='bx bx-paperclip -rotate-45 text-2xl text-teal-500'></i>
+                          <i class='text-2xl text-teal-500 -rotate-45 bx bx-paperclip'></i>
                           <div>
                             <h1 class="text-teal-500 text-md">RRIN-2021-0054 DN.pdf</h1>
                             <p class="text-sm">by James Taylor on 04/05/21 08.13 AM</p>
                           </div>
                         </div>
                         <label
-                          class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                          class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                           <span class="relative text-base text-white">
-                            <i class='bx bx-plus text-xl'></i>Add Attachments</span>
+                            <i class='text-xl bx bx-plus'></i>Add Attachments</span>
                         </label>
                       </td>
-                      <td class="px-5 py-5 bg-gray-100 text-sm" colspan="6">
+                      <td class="px-5 py-5 text-sm bg-gray-100" colspan="6">
                         <p class="text-gray-900 whitespace-no-wrap">
                           1 x Desert Truck from Rig-Site (1/2)
                         </p>
@@ -459,59 +462,59 @@
             <p class="font-bold text-md">Vendor Invoice</p>
             <div>
               <label data-bs-toggle="modal" data-bs-target="#addVendorInvoice"
-                class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
                 <span class="relative text-base text-white">
-                  <i class='bx bx-plus text-xl mb-5'></i> Add Attachments</span>
+                  <i class='mb-5 text-xl bx bx-plus'></i> Add Attachments</span>
               </label>
 
 
 
               <!-- modal vendor invoice -->
               <div
-                class="modal fade fixed hidden top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+                class="fixed top-0 left-0 hidden w-full h-full overflow-x-hidden overflow-y-auto outline-none modal fade"
                 id="addVendorInvoice" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered relative w-auto pointer-events-none">
+                <div class="relative w-auto pointer-events-none modal-dialog modal-lg modal-dialog-centered">
                   <div
-                    class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                    class="relative flex flex-col w-full text-current bg-white border-none rounded-md shadow-lg outline-none pointer-events-auto modal-content bg-clip-padding">
 
                     <div class="px-10">
                       <div class="my-12">
-                        <label class="block tracking-wide text-gray-700 mb-2" for="grid-first-name">
+                        <label class="block mb-2 tracking-wide text-gray-700" for="grid-first-name">
                           Vendor Invoice No.
                         </label>
                         <input
-                          class="appearance-none block w-full bg-gray-100 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                          class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-100 border rounded appearance-none focus:outline-none focus:bg-white"
                           id="grid-first-name" type="text" placeholder="Jane">
                       </div>
 
                       <div class="mb-10">
                         <h1 class="mb-14">Invoice Attatchment</h1>
                         <label
-                          class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                          class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                           <span class="relative text-base text-white">
-                            <i class='bx bx-plus text-xl'></i>Add Attachments</span>
+                            <i class='text-xl bx bx-plus'></i>Add Attachments</span>
                         </label>
                         <h1 class="my-14">Supporting Document</h1>
                         <label
-                          class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                          class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                           <span class="relative text-base text-white">
-                            <i class='bx bx-plus text-xl'></i>Add Attachments</span>
+                            <i class='text-xl bx bx-plus'></i>Add Attachments</span>
                         </label>
                       </div>
                     </div>
 
-                    <div class="flex gap-5 my-5 justify-end mx-5">
+                    <div class="flex justify-end gap-5 mx-5 my-5">
                       <div>
                         <label data-bs-dismiss="modal"
-                          class="relative group h-14 border-2 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-500 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white">
+                          class="relative px-6 py-2 font-semibold border-2 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-500 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white">
                           <span class="relative text-base">Cancel</span>
                         </label>
                       </div>
                       <div>
                         <label
-                          class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                          class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                           <span class="relative text-base text-white">Submit</span>
                         </label>
@@ -527,9 +530,9 @@
           <table class="w-full ">
             <thead class="bg-gray-300 text-start">
               <tr>
-                <th class="text-start text-white px-3 py-1 border border-gray-300 ">Invoice No.</th>
-                <th class="text-start text-white py-1 border border-gray-300">Invoice Attachment</th>
-                <th class="text-start text-white py-1 border border-gray-300">Support Document</th>
+                <th class="px-3 py-1 text-white border border-gray-300 text-start ">Invoice No.</th>
+                <th class="py-1 text-white border border-gray-300 text-start">Invoice Attachment</th>
+                <th class="py-1 text-white border border-gray-300 text-start">Support Document</th>
                 <th></th>
               </tr>
             </thead>
@@ -537,34 +540,34 @@
               <tr class="border">
                 <td class="px-3 py-1">AAL-008</td>
                 <td>
-                  <div class="py-1 flex items-center text-teal-500">
-                    <i class='bx bx-paperclip -rotate-45 text-2xl'></i>
+                  <div class="flex items-center py-1 text-teal-500">
+                    <i class='text-2xl -rotate-45 bx bx-paperclip'></i>
                     <p>AAL_008_Invoice.pdf</p>
                   </div>
                 </td>
                 <td>
-                  <div class="py-1 flex items-center gap-2">
+                  <div class="flex items-center gap-2 py-1">
                     <p class="text-white bg-teal-500 rounded-full px-1.5">0</p>
-                    <i class='bx bx-chevron-down text-2xl bg-gray-100 rounded-full px-1 hover:bg-gray-300'></i>
+                    <i class='px-1 text-2xl bg-gray-100 rounded-full bx bx-chevron-down hover:bg-gray-300'></i>
                   </div>
                 </td>
                 <td>
-                  <div class="py-1 flex items-center justify-end px-5 gap-2">
-                    <i class='bx bxs-trash text-red-500'></i>
-                    <i class='bx bxs-pencil text-teal-600'></i>
+                  <div class="flex items-center justify-end gap-2 px-5 py-1">
+                    <i class='text-red-500 bx bxs-trash'></i>
+                    <i class='text-teal-600 bx bxs-pencil'></i>
                   </div>
                 </td>
               </tr>
               <tr class="border">
                 <td colspan="5">
                   <div class="flex w-full gap-2">
-                    <div class="w-1/2 flex justify-end items-center">
-                      <p class="text-end w-64">Click the button if all vendor invoices have been received</p>
+                    <div class="flex items-center justify-end w-1/2">
+                      <p class="w-64 text-end">Click the button if all vendor invoices have been received</p>
                     </div>
                     <label
-                      class="my-2 relative group h-14 bg-teal-500 px-10 py-4 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                      class="relative px-10 py-4 my-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
-                      <span class="relative text-base text-white flex items-center">All Received</span>
+                      <span class="relative flex items-center text-base text-white">All Received</span>
                     </label>
                   </div>
                 </td>
@@ -576,27 +579,27 @@
 
 
         <div>
-          <h1 class="font-bold text-xl bg-gray-300 text-gray-600 px-5 py-3">For Internal Only</h1>
+          <h1 class="px-5 py-3 text-xl font-bold text-gray-600 bg-gray-300">For Internal Only</h1>
           <div class="flex px-5">
             <div class="w-1/2">
-              <p class="text-sm mt-5 mb-7">Attachment </p>
+              <p class="mt-5 text-sm mb-7">Attachment </p>
               <label data-bs-toggle="modal" data-bs-target="#internalNote"
-                class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                 <span class="relative text-base text-white">
-                  <i class='bx bx-plus text-xl mb-5'></i> Add Attachments</span>
+                  <i class='mb-5 text-xl bx bx-plus'></i> Add Attachments</span>
               </label>
 
               <!-- modal internal note -->
               <div
-                class="modal fade fixed hidden top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+                class="fixed top-0 left-0 hidden w-full h-full overflow-x-hidden overflow-y-auto outline-none modal fade"
                 id="internalNote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered relative w-auto pointer-events-none">
+                <div class="relative w-auto pointer-events-none modal-dialog modal-lg modal-dialog-centered">
                   <div
-                    class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                    class="relative flex flex-col w-full text-current bg-white border-none rounded-md shadow-lg outline-none pointer-events-auto modal-content bg-clip-padding">
 
                     <div class="text-center">
-                      <p class="text-md font-semibold py-7">Internal Note</p>
+                      <p class="font-semibold text-md py-7">Internal Note</p>
                     </div>
 
                     <div class="m-5">
@@ -622,16 +625,16 @@
       " id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
                     </div>
 
-                    <div class="flex gap-5 my-5 justify-end mx-5">
+                    <div class="flex justify-end gap-5 mx-5 my-5">
                       <div>
                         <label data-bs-dismiss="modal"
-                          class="relative group h-14 border-2 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-500 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white">
+                          class="relative px-6 py-2 font-semibold border-2 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-500 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white">
                           <span class="relative text-base">Cancel</span>
                         </label>
                       </div>
                       <div>
                         <label
-                          class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                          class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                           <span class="relative text-base text-white">Submit</span>
                         </label>
@@ -642,13 +645,13 @@
               </div>
 
             </div>
-            <div class="border-l-2 pl-8">
-              <p class="text-sm mt-5 mb-7">Internal Note </p>
+            <div class="pl-8 border-l-2">
+              <p class="mt-5 text-sm mb-7">Internal Note </p>
               <label
-                class="relative group h-14 bg-teal-500 px-6 py-2 rounded before:rounded font-semibold before:absolute before:inset-0  before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
+                class="relative px-6 py-2 font-semibold bg-teal-500 rounded group h-14 before:rounded before:absolute before:inset-0 before:bg-teal-700 before:scale-x-0 before:origin-right before:transition before:duration-300 hover:before:scale-x-100 hover:before:origin-left ">
 
                 <span class="relative text-base text-white">
-                  <i class='bx bx-plus text-xl'></i> Add Attachments Note</span>
+                  <i class='text-xl bx bx-plus'></i> Add Attachments Note</span>
               </label>
             </div>
             <div>
@@ -658,7 +661,7 @@
         </div>
 
         <div class="px-5">
-          <p class="mt-10 font-bold text-xl">View Activity Note</p>
+          <p class="mt-10 text-xl font-bold">View Activity Note</p>
 
         </div>
 
@@ -671,10 +674,26 @@
 <script>
 export default {
   name: 'DetailInstruction',
+  mounted() {
+    this.getData();
+  },
   data() {
     return {
+      result:{},
       show: false,
     };
+  },
+  methods: {
+    getData() {
+      axios
+        .get("instruction/detail_instruction/"+ this.$route.params.id)
+        .then((res) => {
+          this.result = res.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
 }
 </script>
