@@ -23,10 +23,12 @@
         return $request->user();
     });
 
+    
     Route::group(['prefix' => 'auth'], function () {
         Route::post('login', 'App\Http\Controllers\UserController@login');
         Route::get('user', 'App\Http\Controllers\UserController@auth');
         Route::post('register', 'App\Http\Controllers\UserController@register');
+        
     });
 
     Route::group(['middleware' => 'auth:api'], function () {
@@ -56,9 +58,11 @@
             // receive invoice
             Route::put('/recieve_invoice', [InstructionController::class, 'recieveInvoice']);
             Route::get('/complete_instruction', [InstructionController::class, 'showComplete']);
+            
+
+            // Export 
             Route::get('/exportpdf/{id}', [InstructionController::class, 'exportpdf'])->name('exportpdf');
-
-
+            Route::get('/exportexcel', [InstructionController::class, 'exportexcel'])->name('exportexcel');
             // terminated
             Route::put('/terminated', [InstructionController::class, 'terminated']);
         });
