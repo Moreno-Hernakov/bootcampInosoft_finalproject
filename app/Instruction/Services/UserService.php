@@ -6,12 +6,13 @@ use App\Instruction\Repositories\UserRepository;
 
 class UserService
 {
-    private UserRepository $userRepository;
+    // private UserRepository $userRepository;
+    private  $userRepository;
 
 	public function __construct() {
 		$this->userRepository = new UserRepository();
 	}
-	
+
 	/**
 	 * NOTE: menambahkan user
 	 */
@@ -22,7 +23,7 @@ class UserService
 	}
 
 	/**
-	 * NOTE: UNTUK mendapatkan data user 
+	 * NOTE: UNTUK mendapatkan data user
 	 */
 	public function find(string $user)
 	{
@@ -48,5 +49,5 @@ class UserService
         return $token;
     }
 
-	
+
 }

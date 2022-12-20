@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    private UserService $userService;
+    // private UserService $userService;;
+    private $userService;
 	public function __construct() {
 		$this->userService = new UserService();
 	}
@@ -37,7 +38,7 @@ class UserController extends Controller
             'email' => $request->post('email'),
             'password' => bcrypt($request->post('password'))
         ];
-        
+
         $checkEmail = $this->userService->findEmail($credentials['email']);
         if ($checkEmail != null) {
 			return response()->json([
@@ -60,6 +61,7 @@ class UserController extends Controller
 	 */
     public function login(Request $request)
     {
+        // return $this->userService;
         $validator = Validator::make($request->all(), [
             'email'     => 'required',
             'password'  => 'required'
@@ -80,7 +82,7 @@ class UserController extends Controller
 
         return response()->json([
             'success' => true,
-            'user'    => auth()->guard('api')->user(),    
+            'user'    => auth()->guard('api')->user(),
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60
