@@ -11,7 +11,7 @@
   
   
 #### frontEnd
-    - clone branch frontEnd 
+    - clone branch frontend 
     - lakukan perintah npm install
     - jalankan npm run serve dan buka relative link untuk project TubeStream
     
