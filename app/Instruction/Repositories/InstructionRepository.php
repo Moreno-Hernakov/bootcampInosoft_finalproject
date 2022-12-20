@@ -85,7 +85,7 @@ class InstructionRepository
 	 *  */
 	public function getAll()
 	{
-		return instruction::all('_id', 'link_to', 'type', 'assigned_vendor', 'attention_of', 'quote', 'customer_po', 'status');
+		return instruction::all();
 	}
 
 	/**
